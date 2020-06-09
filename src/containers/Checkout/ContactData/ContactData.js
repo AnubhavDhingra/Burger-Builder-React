@@ -12,7 +12,8 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Your Name'
+                    placeholder: 'Your Name',
+                    id: 'name'
                 },
                 value: '',
                 validation: {
@@ -25,7 +26,8 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Street'
+                    placeholder: 'Street',
+                    id: 'street'
                 },
                 value: '',
                 validation: {
@@ -38,7 +40,8 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'ZIP-CODE'
+                    placeholder: 'ZIP-CODE',
+                    id: 'zip-code'
                 },
                 value: '',
                 validation: {
@@ -53,7 +56,8 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Country'
+                    placeholder: 'Country',
+                    id: 'country'
                 },
                 value: '',
                 validation: {
@@ -66,7 +70,8 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'email',
-                    placeholder: 'Your E-Mail'
+                    placeholder: 'Your E-Mail',
+                    id: 'email address'
                 },
                 value: '',
                 validation: {
@@ -168,6 +173,7 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
+                        valueType={formElement.config.elementConfig.id}
                     />
                 })}
                 <Button btnType="Success" disabled={!this.state.formIsValid}>ORDER</Button>
